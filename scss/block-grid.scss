@@ -1,0 +1,39 @@
+///
+///  Generate Block Grid
+///
+
+// @example
+/*
+.block-grid-three-columns-with-gutters {
+    @include generateBlockGridGutter(3);
+}
+*/
+
+// Mixin for block grids with gutters:
+@mixin generateBlockGridGutters($blockGridValue) {
+
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 (-$gutter/2);
+
+    &>* {
+        flex-basis: (100%/$blockGridValue);
+        max-width: (100%/$blockGridValue);
+        padding: 0 ($gutter/2) $gutter;
+    }
+
+}
+
+// Mixin for block grids without gutters:
+@mixin generateBlockGridGutterless($blockGridValue) {
+
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+
+    &>* {
+        flex-basis: (100%/$blockGridValue);
+        max-width: (100%/$blockGridValue);
+    }
+
+}

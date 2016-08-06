@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>SpringGrid | Flexbox Grid System</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body class="container">
+
+<a href="../docs/index.html"><img src="../assets/springgridlogo.png"></a>
+
+<h2>Grid Demo</h2>
+<hr>
+
+<h3>Auto Grid (Gutters)</h3>
+<div class="autogrid">
+    <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+    <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+    <div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+</div>
+
+<h3>Auto Grid (Gutters)</h3>
+<div class="autogrid">
+    <div class="col"><div class="box">Col</div></div>
+    <div class="col"><div class="box">Col</div></div>
+    <div class="col"><div class="box">Col</div></div>
+</div>
+
+<h3>Auto Grid (Gutterless)</h3>
+<div class="autogrid-gutterless">
+    <div class="col"><div class="box">Col</div></div>
+    <div class="col"><div class="box">Col</div></div>
+    <div class="col"><div class="box">Col</div></div>
+</div>
+
+<h3>Numbered Grid</h3>
+<div class="grid-numbered">
+    <div class="three"><div class="box">three</div></div>
+    <div class="six"><div class="box">six</div></div>
+    <div class="three"><div class="box">three</div></div>
+
+    <div class="nine"><div class="box">nine</div></div>
+    <div class="three"><div class="box">three</div></div>
+</div>
+
+<h3>Nested Grid</h3>
+<div class="autogrid">
+    <div><h4>Containing Div</h4><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+        <div class="grid-numbered">
+            <div class="three"><h4>Nested Div</h4><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+            <div class="three"><h4>Nested Div</h4><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+            <div class="three"><h4>Nested Div</h4><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+            <div class="three"><h4>Nested Div</h4><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+        </div>
+
+    </div>
+
+</div>
+
+<h3>Alignment</h3>
+<div class="grid-numbered">
+    <div class="three"><div class="box"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p></div></div>
+    <div class="three column--top"><div class="box">Top</div></div>
+    <div class="three column--middle"><div class="box">Middle</div></div>
+    <div class="three column--bottom"><div class="box">Bottom</div></div>
+</div>
+
+<h3>Block Grid (Gutters)</h3>
+<div class="bg4">
+    <div class="grid-item"><div class="box">Block</div></div>
+    <div class="grid-item"><div class="box">Block</div></div>
+    <div class="grid-item"><div class="box">Block</div></div>
+
+    <div class="grid-item"><div class="box">Block</div></div>
+    <div class="grid-item"><div class="box">Block</div></div>
+    <div class="grid-item"><div class="box">Block</div></div>
+
+    <div class="grid-item"><div class="box">Block</div></div>
+    <div class="grid-item"><div class="box">Block</div></div>
+    <div class="grid-item"><div class="box">Block</div></div>
+</div>
+
+<h3>Block Grid (Gutterless)</h3>
+<div class="bg3-gutterless">
+    <div class="grid-item"><img src="http://placehold.it/450x250/eeeeee/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/cccccc/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/eeeeee/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/cccccc/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/eeeeee/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/cccccc/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/eeeeee/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/cccccc/666666"></div>
+    <div class="grid-item"><img src="http://placehold.it/450x250/eeeeee/666666"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "springgrid",
+  "version": "1.0.0",
+  "description": "Flexbox grid/layout system built with Scss",
+  "author": "Mike Seaby <mike@pixelspring.co.uk>"
+}

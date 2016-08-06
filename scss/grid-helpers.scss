@@ -1,0 +1,110 @@
+///
+///  Grid Helpers
+///
+
+
+// ----------------------------------------------
+// GRID SPECIFIC
+// ----------------------------------------------
+
+// Horizontal Alignment:
+.grid--gutterless {
+    margin: 0;
+    > [class*="col"]{
+        padding: 0;
+    }
+}
+
+.grid--centered {
+    justify-content: center;
+}
+
+.grid--right {
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+// Vertical Alignment:
+.grid--top {
+    align-items: flex-start;
+}
+
+.grid--middle {
+    align-items: center;
+}
+.grid--bottom {
+    align-items: flex-end;
+}
+
+// Orders
+.grid--reverse {
+    flex-direction: row-reverse;
+}
+.grid--column {
+    flex-direction: column;
+    > [class*="col-"] {
+      flex-basis: auto;
+    }
+}
+
+.grid--column-reverse {
+    flex-direction: column-reverse;
+}
+
+// Spaces between and around cols
+.grid--spaceBetween {
+    justify-content: space-between;
+}
+.grid--spaceAround {
+    justify-content: space-around;
+}
+
+// Equal heights columns
+.grid--equalHeight > [class*="col"]{
+    display: flex;
+}
+
+// Removes the padding-bottom
+.grid--noBottom > [class*="col"]{
+    padding-bottom: 0;
+}
+
+
+
+
+// ----------------------------------------------
+// COLUMN SPECIFIC
+// ----------------------------------------------
+
+@mixin columnTop {
+    align-self: flex-start;
+}
+@mixin columnMiddle {
+    align-self: center;
+}
+@mixin columnBottom {
+    align-self: flex-end;
+}
+@mixin columnFirst {
+      order: -1;
+}
+@mixin columnLast {
+      order: 1;
+}
+
+.column--top {
+    @include columnTop
+}
+.column--middle {
+    @include columnMiddle;
+}
+.column--bottom{
+    @include columnBottom;
+}
+.column--first {
+      @include columnFirst;
+}
+.column--last {
+      @include columnLast;
+}

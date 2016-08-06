@@ -1,0 +1,133 @@
+
+
+// Basics:
+@import "normalize";
+// @import "scaff";
+
+// Import Grid Components:
+@import "grid-vars";
+@import "grid";
+@import "block-grid";
+@import "grid-helpers";
+@import "generators";
+
+// Generate Output:
+// @include generateNumberedPrototypeColumns;
+
+// ------------------------------------------------------------
+// flex: flex-grow flex-shrink flex-basis;
+
+// APP.HTML STYLES
+
+// Main Container
+.grid-frame {
+    @include gridFrame;
+}
+
+.topbar,
+footer {
+    padding: 20px;
+}
+
+.topbar {
+    border-bottom: 1px solid lightgray;}
+
+footer {
+    border-top: 1px solid lightgray;
+}
+
+// Row Equivalent
+.grid-block {
+    @include gridBlock;
+}
+
+aside {
+    width: 200px;
+    overflow-y: auto;
+    flex: 0 0 250px;
+
+    border-right: 1px solid lightgray;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        border-bottom: 1px solid lightgray;
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 20px 0 20px 10px;
+
+            &:hover { background: lightgray;}
+        }
+
+    }
+}
+
+main {
+    // background: lightyellow;
+    flex: 1;
+    overflow-y: auto;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+// ------------------------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.container {
+    @include container;
+}
+
+
+.three { @include numberedColumn(3); }
+.nine  { @include numberedColumn(9); }
+.six   { @include numberedColumn(6); }
+
+
+
+.bg4 {
+    @include generateBlockGridGutters(4);
+    .box {background: gold;}
+}
+
+.bg3-gutterless {
+    @include generateBlockGridGutterless(3);
+    .box {background: red;}
+}
+
+.autogrid {
+    @include autoGridGutters;
+}
+.autogrid-gutterless {
+    @include autoGridGutterless;
+}
+
+.grid-numbered {
+    @include gridNumbered;
+}
+
+
+
+.box {
+    background: #97cd76;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
