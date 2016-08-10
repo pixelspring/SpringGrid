@@ -15,10 +15,12 @@
     }
 }
 
+@mixin gridCentered {}
 .grid--centered {
     justify-content: center;
 }
 
+@mixin gridRight {}
 .grid--right {
     justify-content: flex-end;
     align-self: flex-end;
@@ -26,21 +28,28 @@
 }
 
 // Vertical Alignment:
+@mixin gridTop {}
 .grid--top {
     align-items: flex-start;
 }
 
+@mixin gridMiddle {}
 .grid--middle {
     align-items: center;
 }
+
+@mixin gridBottom {}
 .grid--bottom {
     align-items: flex-end;
 }
 
 // Orders
+@mixin gridReverse {}
 .grid--reverse {
     flex-direction: row-reverse;
 }
+
+@mixin gridColumn {}
 .grid--column {
     flex-direction: column;
     > [class*="col-"] {
@@ -48,24 +57,30 @@
     }
 }
 
+@mixin gridColumnReverse {}
 .grid--column-reverse {
     flex-direction: column-reverse;
 }
 
 // Spaces between and around cols
+@mixin gridSpaceBetween {}
 .grid--spaceBetween {
     justify-content: space-between;
 }
+
+@mixin gridSpaceAround {}
 .grid--spaceAround {
     justify-content: space-around;
 }
 
 // Equal heights columns
+@mixin gridEqualHeight {}
 .grid--equalHeight > [class*="col"]{
     display: flex;
 }
 
 // Removes the padding-bottom
+@mixin gridNobottomPadding {}
 .grid--noBottom > [class*="col"]{
     padding-bottom: 0;
 }
