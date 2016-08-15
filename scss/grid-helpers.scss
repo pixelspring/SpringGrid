@@ -15,38 +15,51 @@
     }
 }
 
-@mixin gridCentered {}
-.grid--centered {
+@mixin gridCentered {
     justify-content: center;
 }
+.grid--centered {
+    @include gridCentered;
+}
 
-@mixin gridRight {}
-.grid--right {
+@mixin gridRight {
     justify-content: flex-end;
     align-self: flex-end;
     margin-left: auto;
 }
+.grid--right {
+    @include gridRight;
+}
 
 // Vertical Alignment:
-@mixin gridTop {}
-.grid--top {
+@mixin gridTop {
     align-items: flex-start;
 }
-
-@mixin gridMiddle {}
-.grid--middle {
-    align-items: center;
+.grid--top {
+    @include gridTop;
 }
 
-@mixin gridBottom {}
-.grid--bottom {
+@mixin gridMiddle {
+    align-items: center;
+}
+.grid--middle {
+    @include gridMiddle;
+}
+
+@mixin gridBottom {
     align-items: flex-end;
+}
+.grid--bottom {
+    @include gridBottom;
 }
 
 // Orders
-@mixin gridReverse {}
-.grid--reverse {
+@mixin gridReverse {
+    // flex-direction: row-reverse!important;
     flex-direction: row-reverse;
+}
+.grid--reverse {
+    @include gridReverse;
 }
 
 @mixin gridColumn {}
@@ -57,20 +70,26 @@
     }
 }
 
-@mixin gridColumnReverse {}
-.grid--column-reverse {
+@mixin gridColumnReverse {
     flex-direction: column-reverse;
+}
+.grid--column-reverse {
+    @include gridColumnReverse;
 }
 
 // Spaces between and around cols
-@mixin gridSpaceBetween {}
-.grid--spaceBetween {
+@mixin gridSpaceBetween {
     justify-content: space-between;
 }
+.grid--spaceBetween {
+    @include gridSpaceBetween;
+}
 
-@mixin gridSpaceAround {}
-.grid--spaceAround {
+@mixin gridSpaceAround {
     justify-content: space-around;
+}
+.grid--spaceAround {
+    @include gridSpaceAround;
 }
 
 // Equal heights columns

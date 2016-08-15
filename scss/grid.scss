@@ -40,7 +40,6 @@
 @mixin autoGridGutters {
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     margin: 0 (-$gutter/2);
 
     &>* {
@@ -65,7 +64,7 @@
 // Numbered Grid:
 @mixin gridNumbered {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     margin: 0 (-$gutter/2);
 
     &>* {
