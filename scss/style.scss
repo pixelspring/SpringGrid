@@ -12,11 +12,10 @@
 @import "generators";
 
 // Generate Output:
-// @include generateNumberedPrototypeColumns;
+// Output helper classes
+@include outputPrototypingHelperClasses;
 
 // ------------------------------------------------------------
-// flex: flex-grow flex-shrink flex-basis;
-
 // APP.HTML STYLES
 
 // Main Container
@@ -94,7 +93,6 @@ img {
 .container {
     @include container;
 }
-
 
 .three { @include numberedColumn(3); }
 .nine  { @include numberedColumn(9); }

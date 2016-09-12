@@ -18,48 +18,31 @@
 @mixin gridCentered {
     justify-content: center;
 }
-.grid--centered {
-    @include gridCentered;
-}
 
 @mixin gridRight {
     justify-content: flex-end;
     align-self: flex-end;
     margin-left: auto;
 }
-.grid--right {
-    @include gridRight;
-}
+
+
 
 // Vertical Alignment:
 @mixin gridTop {
     align-items: flex-start;
 }
-.grid--top {
-    @include gridTop;
-}
 
 @mixin gridMiddle {
     align-items: center;
-}
-.grid--middle {
-    @include gridMiddle;
 }
 
 @mixin gridBottom {
     align-items: flex-end;
 }
-.grid--bottom {
-    @include gridBottom;
-}
 
 // Orders
 @mixin gridReverse {
-    // flex-direction: row-reverse!important;
     flex-direction: row-reverse;
-}
-.grid--reverse {
-    @include gridReverse;
 }
 
 @mixin gridColumn {}
@@ -73,23 +56,16 @@
 @mixin gridColumnReverse {
     flex-direction: column-reverse;
 }
-.grid--column-reverse {
-    @include gridColumnReverse;
-}
+
 
 // Spaces between and around cols
 @mixin gridSpaceBetween {
     justify-content: space-between;
 }
-.grid--spaceBetween {
-    @include gridSpaceBetween;
-}
+
 
 @mixin gridSpaceAround {
     justify-content: space-around;
-}
-.grid--spaceAround {
-    @include gridSpaceAround;
 }
 
 // Equal heights columns
@@ -127,18 +103,35 @@
       order: 1;
 }
 
-.column--top {
-    @include columnTop
-}
-.column--middle {
-    @include columnMiddle;
-}
-.column--bottom{
-    @include columnBottom;
-}
-.column--first {
-      @include columnFirst;
-}
-.column--last {
-      @include columnLast;
+
+
+// ----------------------------------------------
+// GENERATE CLASSES FOR FAST PROTOTYPING
+// ----------------------------------------------
+@mixin outputPrototypingHelperClasses {
+    // Grid Alignment
+    .grid--centered { @include gridCentered; }
+    .grid--right {  @include gridRight; }
+
+    // Vertical Alignment
+    .grid--top { @include gridTop; }
+    .grid--middle { @include gridMiddle; }
+    .grid--bottom {  @include gridBottom; }
+
+    // Ordering
+    .grid--reverse { @include gridReverse; }
+    .grid--column-reverse { @include gridColumnReverse; }
+
+    // Spacing
+    .grid--spaceBetween { @include gridSpaceBetween; }
+    .grid--spaceAround { @include gridSpaceAround; }
+
+
+
+    // Column Specific
+    .column--top { @include columnTop; }
+    .column--middle { @include columnMiddle; }
+    .column--bottom{ @include columnBottom; }
+    .column--first { @include columnFirst; }
+    .column--last { @include columnLast; }
 }
