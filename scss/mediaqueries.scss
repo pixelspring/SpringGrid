@@ -1,0 +1,39 @@
+@mixin mq($breakpoint) {
+
+  $mq-sm: "(max-width: 639px)";
+  // $mq-sm: "(min-width: 321px) and (max-width: 768px)";
+  // $mq-md: "(min-width: 769px) and (max-width: 1199px)";
+  $mq-md: "(min-width: 640px)";
+  $mq-lg: "(min-width: 1024px)";
+  $mq-xl: "(min-width: 1440px)";
+
+  @if $breakpoint == sm {
+    @media #{$mq-sm} { @content; }
+  }
+  @else if $breakpoint == md {
+    @media #{$mq-md} { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media #{$mq-lg}  { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media #{$mq-xl}  { @content; }
+  }
+}
+
+
+/*
+// Example Usage:
+.content
+{
+    @include mq(xs)
+    {
+        width: 100%;
+    }
+
+    @include mq(lg)
+    {
+        width: 50%;
+    }
+}
+ */

@@ -365,6 +365,21 @@ textarea {
   /* 2 */ }
 
 /*
+// Example Usage:
+.content
+{
+    @include mq(xs)
+    {
+        width: 100%;
+    }
+
+    @include mq(lg)
+    {
+        width: 50%;
+    }
+}
+ */
+/*
 .block-grid-three-columns-with-gutters {
     @include generateBlockGridGutter(3);
 }
@@ -582,58 +597,119 @@ img {
   margin: 0 auto;
   max-width: 90%; }
 
-.three {
-  -webkit-flex-basis: 12;
-      -ms-flex-preferred-size: 12;
-          flex-basis: 12;
-  width: 25%; }
+@media (max-width: 639px) {
+  .three {
+    -webkit-flex-basis: 12;
+        -ms-flex-preferred-size: 12;
+            flex-basis: 12;
+    width: 100%; } }
 
-.nine {
-  -webkit-flex-basis: 12;
-      -ms-flex-preferred-size: 12;
-          flex-basis: 12;
-  width: 75%; }
+@media (min-width: 640px) {
+  .three {
+    -webkit-flex-basis: 12;
+        -ms-flex-preferred-size: 12;
+            flex-basis: 12;
+    width: 25%; } }
 
-.six {
-  -webkit-flex-basis: 12;
-      -ms-flex-preferred-size: 12;
-          flex-basis: 12;
-  width: 50%; }
+@media (max-width: 639px) {
+  .six {
+    -webkit-flex-basis: 12;
+        -ms-flex-preferred-size: 12;
+            flex-basis: 12;
+    width: 100%; } }
 
-.bg4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  margin: 0 -8px; }
-  .bg4 > * {
-    -webkit-flex-basis: 25%;
-        -ms-flex-preferred-size: 25%;
-            flex-basis: 25%;
-    max-width: 25%;
-    padding: 0 8px 16px; }
-  .bg4 .box {
-    background: gold; }
+@media (min-width: 640px) {
+  .six {
+    -webkit-flex-basis: 12;
+        -ms-flex-preferred-size: 12;
+            flex-basis: 12;
+    width: 50%; } }
 
-.bg3-gutterless {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  margin: 0; }
-  .bg3-gutterless > * {
-    -webkit-flex-basis: 33.3333333333%;
-        -ms-flex-preferred-size: 33.3333333333%;
-            flex-basis: 33.3333333333%;
-    max-width: 33.3333333333%; }
-  .bg3-gutterless .box {
-    background: red; }
+@media (max-width: 639px) {
+  .nine {
+    -webkit-flex-basis: 12;
+        -ms-flex-preferred-size: 12;
+            flex-basis: 12;
+    width: 100%; } }
+
+@media (min-width: 640px) {
+  .nine {
+    -webkit-flex-basis: 12;
+        -ms-flex-preferred-size: 12;
+            flex-basis: 12;
+    width: 75%; } }
+
+@media (max-width: 639px) {
+  .bg4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 0 -8px; }
+    .bg4 > * {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      max-width: 50%;
+      padding: 0 8px 16px; } }
+
+@media (min-width: 640px) {
+  .bg4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 0 -8px; }
+    .bg4 > * {
+      -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+              flex-basis: 25%;
+      max-width: 25%;
+      padding: 0 8px 16px; } }
+
+.bg4 .box {
+  background: gold; }
+
+@media (max-width: 639px) {
+  .bg3-gutterless {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 0; }
+    .bg3-gutterless > * {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      max-width: 50%; } }
+
+@media (min-width: 640px) {
+  .bg3-gutterless {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 0; }
+    .bg3-gutterless > * {
+      -webkit-flex-basis: 33.3333333333%;
+          -ms-flex-preferred-size: 33.3333333333%;
+              flex-basis: 33.3333333333%;
+      max-width: 33.3333333333%; } }
+
+.bg3-gutterless .box {
+  background: red; }
 
 .autogrid {
   display: -webkit-box;

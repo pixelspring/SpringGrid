@@ -2,10 +2,10 @@
 
 // Basics:
 @import "normalize";
-// @import "scaff";
 
 // Import Grid Components:
 @import "grid-vars";
+@import "mediaqueries";
 @import "grid";
 @import "block-grid";
 @import "grid-helpers";
@@ -94,19 +94,32 @@ img {
     @include container;
 }
 
-.three { @include numberedColumn(3); }
-.nine  { @include numberedColumn(9); }
-.six   { @include numberedColumn(6); }
+.three {
+    @include mq(sm) { @include numberedColumn(12); }
+    @include mq(md) { @include numberedColumn(3); }
+}
+
+.six {
+    @include mq(sm) { @include numberedColumn(12); }
+    @include mq(md) { @include numberedColumn(6); }
+}
+
+.nine {
+    @include mq(sm) { @include numberedColumn(12); }
+    @include mq(md) { @include numberedColumn(9); }
+}
 
 
 
 .bg4 {
-    @include generateBlockGridGutters(4);
+    @include mq(sm) { @include generateBlockGridGutters(2); }
+    @include mq(md) { @include generateBlockGridGutters(4); }
     .box {background: gold;}
 }
 
 .bg3-gutterless {
-    @include generateBlockGridGutterless(3);
+    @include mq(sm) { @include generateBlockGridGutterless(2); }
+    @include mq(md) { @include generateBlockGridGutterless(3); }
     .box {background: red;}
 }
 
