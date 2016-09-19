@@ -1,8 +1,6 @@
 @mixin mq($breakpoint) {
 
   $mq-sm: "(max-width: 639px)";
-  // $mq-sm: "(min-width: 321px) and (max-width: 768px)";
-  // $mq-md: "(min-width: 769px) and (max-width: 1199px)";
   $mq-md: "(min-width: 640px)";
   $mq-lg: "(min-width: 1024px)";
   $mq-xl: "(min-width: 1440px)";
