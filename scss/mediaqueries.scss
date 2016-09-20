@@ -1,35 +1,37 @@
+
+$breakpoints: (
+    small: 0px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1440px
+) !default;
+
+
 @mixin mq($breakpoint) {
 
-  $mq-sm: "(max-width: 639px)";
-  $mq-md: "(min-width: 640px)";
-  $mq-lg: "(min-width: 1024px)";
-  $mq-xl: "(min-width: 1440px)";
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
 
-  @if $breakpoint == sm {
-    @media #{$mq-sm} { @content; }
-  }
-  @else if $breakpoint == md {
-    @media #{$mq-md} { @content; }
-  }
-  @else if $breakpoint == lg {
-    @media #{$mq-lg}  { @content; }
-  }
-  @else if $breakpoint == xl {
-    @media #{$mq-xl}  { @content; }
-  }
+    @else {
+        @warn "The `#{$breakpoint}` doesent exist in the breakpoints map!. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+
 }
-
 
 /*
 // Example Usage:
 .content
 {
-    @include mq(xs)
+    @include mq(small)
     {
         width: 100%;
     }
 
-    @include mq(lg)
+    @include mq(medium)
     {
         width: 50%;
     }

@@ -95,31 +95,31 @@ img {
 }
 
 .three {
-    @include mq(sm) { @include numberedColumn(12); }
-    @include mq(md) { @include numberedColumn(3); }
+    @include mq(small) { @include numberedColumn(12); }
+    @include mq(medium) { @include numberedColumn(3); }
 }
 
 .six {
-    @include mq(sm) { @include numberedColumn(12); }
-    @include mq(md) { @include numberedColumn(6); }
+    @include mq(small) { @include numberedColumn(12); }
+    @include mq(medium) { @include numberedColumn(6); }
 }
 
 .nine {
-    @include mq(sm) { @include numberedColumn(12); }
-    @include mq(md) { @include numberedColumn(9); }
+    @include mq(small) { @include numberedColumn(12); }
+    @include mq(medium) { @include numberedColumn(9); }
 }
 
 
 
 .bg4 {
-    @include mq(sm) { @include generateBlockGridGutters(2); }
-    @include mq(md) { @include generateBlockGridGutters(4); }
+    @include mq(small) { @include generateBlockGridGutters(2); }
+    @include mq(medium) { @include generateBlockGridGutters(4); }
     .box {background: gold;}
 }
 
 .bg3-gutterless {
-    @include mq(sm) { @include generateBlockGridGutterless(2); }
-    @include mq(md) { @include generateBlockGridGutterless(3); }
+    @include mq(small) { @include generateBlockGridGutterless(2); }
+    @include mq(medium) { @include generateBlockGridGutterless(3); }
     .box {background: red;}
 }
 

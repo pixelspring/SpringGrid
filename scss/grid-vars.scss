@@ -6,37 +6,10 @@ $grid-columns: 12 !default;
 $block-grid-columns: 3 !default;
 $container-width: 90% !default;
 
-
-// Function to generate the offset
-@mixin makeOff($off)
-{
-    [class*="grid"]{
-        > [push-left*="#{$off}-0"]{ margin-left: 0; }
-        > [push-left*="#{$off}-1"]{ margin-left: $glp_col-1; }
-        > [push-left*="#{$off}-2"]{ margin-left: $glp_col-2; }
-        > [push-left*="#{$off}-3"]{ margin-left: $glp_col-3; }
-        > [push-left*="#{$off}-4"]{ margin-left: $glp_col-4; }
-        > [push-left*="#{$off}-5"]{ margin-left: $glp_col-5; }
-        > [push-left*="#{$off}-6"]{ margin-left: $glp_col-6; }
-        > [push-left*="#{$off}-6"]{ margin-left: $glp_col-6; }
-        > [push-left*="#{$off}-7"]{ margin-left: $glp_col-7; }
-        > [push-left*="#{$off}-8"]{ margin-left: $glp_col-8; }
-        > [push-left*="#{$off}-9"]{ margin-left: $glp_col-9; }
-        > [push-left*="#{$off}-10"]{ margin-left: $glp_col-10; }
-        > [push-left*="#{$off}-11"]{ margin-left: $glp_col-11; }
-
-        > [push-right*="#{$off}-0"]{ margin-right: 0; }
-        > [push-right*="#{$off}-1"]{ margin-right: $glp_col-1; }
-        > [push-right*="#{$off}-2"]{ margin-right: $glp_col-2; }
-        > [push-right*="#{$off}-3"]{ margin-right: $glp_col-3; }
-        > [push-right*="#{$off}-4"]{ margin-right: $glp_col-4; }
-        > [push-right*="#{$off}-5"]{ margin-right: $glp_col-5; }
-        > [push-right*="#{$off}-6"]{ margin-right: $glp_col-6; }
-        > [push-right*="#{$off}-6"]{ margin-right: $glp_col-6; }
-        > [push-right*="#{$off}-7"]{ margin-right: $glp_col-7; }
-        > [push-right*="#{$off}-8"]{ margin-right: $glp_col-8; }
-        > [push-right*="#{$off}-9"]{ margin-right: $glp_col-9; }
-        > [push-right*="#{$off}-10"]{ margin-right: $glp_col-10; }
-        > [push-right*="#{$off}-11"]{ margin-right: $glp_col-11; }
-    }
-}
+// Breakpoints:
+$breakpoints: (
+    small: 0px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1440px
+);
