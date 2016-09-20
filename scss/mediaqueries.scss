@@ -16,7 +16,7 @@ $breakpoints: (
     }
 
     @else {
-        @warn "The `#{$breakpoint}` doesent exist in the breakpoints map!. "
+        @warn "The `#{$breakpoint}` breakpoint dosent exist in the breakpoints map! "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 
