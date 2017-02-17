@@ -1,7 +1,3 @@
-/* Doc Styles */
-
-
-
 // Basics:
 @import "../scss/normalize";
 
@@ -13,157 +9,155 @@
 @import "../scss/grid-helpers";
 @import "../scss/generators";
 
-// Generate Output:
-// Output helper classes
+// Generate & Output helper classes
 @include outputPrototypingHelperClasses;
 
 // ------------------------------------------------------------
-// APP.HTML STYLES
+// DOC & EXAMPLE STYLES
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.top-link {
+  float: right;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+
 
 // Main Container
 .grid-frame {
-    @include gridFrame;
+  @include gridFrame;
 }
 
 .topbar,
 footer {
-    padding: 20px;
+  padding: 20px;
 }
 
 .topbar {
-    border-bottom: 1px solid lightgray;}
+  border-bottom: 1px solid lightgray;}
 
 footer {
-    border-top: 1px solid lightgray;
+  border-top: 1px solid lightgray;
 }
 
 // Row Equivalent
 .grid-block {
-    @include gridBlock;
+  @include gridBlock;
 }
 
 aside {
-    width: 200px;
-    overflow-y: auto;
-    flex: 0 0 250px;
+  width: 200px;
+  overflow-y: auto;
+  flex: 0 0 250px;
 
-    border-right: 1px solid lightgray;
+  border-right: 1px solid lightgray;
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    border-bottom: 1px solid lightgray;
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 20px 0 20px 10px;
+
+      &:hover { background: lightgray;}
     }
+  }
 
-    li {
-        border-bottom: 1px solid lightgray;
-
-        a {
-            display: block;
-            text-decoration: none;
-            padding: 20px 0 20px 10px;
-
-            &:hover { background: lightgray;}
-        }
-
-    }
 }
 
 main {
-    // background: lightyellow;
-    flex: 1;
-    overflow-y: auto;
+  flex: 1;
+  overflow-y: auto;
 }
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 // ------------------------------------------------------------
 
-* {
-    box-sizing: border-box;
-}
+
 
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 .container {
-    @include container;
+  @include container;
 }
 
 .three {
-    @include mq(small) { @include numberedColumn(12); }
-    @include mq(medium) { @include numberedColumn(3); }
+  @include mq(small) { @include numberedColumn(12); }
+  @include mq(medium) { @include numberedColumn(3); }
 }
 
 .six {
-    @include mq(small) { @include numberedColumn(12); }
-    @include mq(medium) { @include numberedColumn(6); }
+  @include mq(small) { @include numberedColumn(12); }
+  @include mq(medium) { @include numberedColumn(6); }
 }
 
 .nine {
-    @include mq(small) { @include numberedColumn(12); }
-    @include mq(medium) { @include numberedColumn(9); }
+  @include mq(small) { @include numberedColumn(12); }
+  @include mq(medium) { @include numberedColumn(9); }
 }
 
 
 
 .bg4 {
-    @include mq(small) { @include generateBlockGridGutters(2); }
-    @include mq(medium) { @include generateBlockGridGutters(4); }
-    .box {background: gold;}
+  @include mq(small) { @include generateBlockGridGutters(2); }
+  @include mq(medium) { @include generateBlockGridGutters(4); }
+  .box {background: gold;}
 }
 
 .bg3-gutterless {
-    @include mq(small) { @include generateBlockGridGutterless(2); }
-    @include mq(medium) { @include generateBlockGridGutterless(3); }
-    .box {background: red;}
+  @include mq(small) { @include generateBlockGridGutterless(2); }
+  @include mq(medium) { @include generateBlockGridGutterless(3); }
+  .box {background: red;}
 }
 
 .autogrid {
-    @include autoGridGutters;
+  @include autoGridGutters;
 }
 .autogrid-gutterless {
-    @include autoGridGutterless;
+  @include autoGridGutterless;
 }
 
 .grid-numbered {
-    @include gridNumbered;
+  @include gridNumbered;
 }
 
 
 
 .box {
-    background: #97cd76;
-    padding: 10px;
-    border-radius: 4px;
-    color: white;
+  background: #97cd76;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
 }
 
 
-
-
-
-
-header {}
-
-section {
-    margin-bottom: 60px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.top-link {
-    float: right;
-}

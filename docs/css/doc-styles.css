@@ -1,4 +1,3 @@
-/* Doc Styles */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -517,6 +516,23 @@ template {
       -ms-flex-order: 1;
           order: 1; }
 
+* {
+  box-sizing: border-box; }
+
+section {
+  margin-bottom: 4rem; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.top-link {
+  float: right;
+  font-weight: normal;
+  font-size: 1rem; }
+
 .grid-frame {
   height: 100vh;
   display: -webkit-box;
@@ -593,9 +609,6 @@ main {
 img {
   max-width: 100%;
   vertical-align: top; }
-
-* {
-  box-sizing: border-box; }
 
 img {
   max-width: 100%;
@@ -747,15 +760,3 @@ img {
   padding: 10px;
   border-radius: 4px;
   color: white; }
-
-section {
-  margin-bottom: 60px; }
-
-a {
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
-
-.top-link {
-  float: right; }

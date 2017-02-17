@@ -1,152 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>SpringGrid Docs | Flexbox Grid System</title>
-    <link rel="stylesheet" href="../docs/css/doc-styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpringGrid Docs | Flexbox Grid System</title>
+  <link rel="stylesheet" href="../docs/css/doc-styles.css">
 </head>
 
 
 <body class="container">
 
-<header>
-    <a href="../docs/index.html"><img src="../docassets/springgridlogo.png"></a>
-    <h2>SpringGrid Flexbox Grid System Docs</h2>
+  <header>
+    <a href="../docs/index.html"><img src="../docs/docassets/springgridlogo.png"></a>
+  </header>
+
+  <section id="demos">
+    <h2>Examples <a class="top-link" href="#top">&#8679;</a></h2>
+    <p><a href="../docs/examples/grid.html">Grid Examples</a></p>
+    <p><a href="../docs/examples/app.html">Sample App Layout</a></p>
     <hr>
-</header>
+  </section>
 
-<h3><a href="#demos">Demos</a> | <a href="#variables">Scss Variables</a> | <a href="#mixins">Mixins</a> | <a href="#helpers">Helpers</a></h3>
-<hr>
-
-
-<section id="demos">
-    <h2>Demos <a class="top-link" href="#top">&#8679;</a></h2>
-    <p><a href="../docs/examples/grid.html">Grid</a></p>
-    <p><a href="../docs/examples/app.html">App</a></p>
-    <hr>
-</section>
-
-
-<section id="variables">
+  <section id="variables">
     <h2>Scss Variables <a class="top-link" href="#top">&#8679;</a></h2>
     <hr>
-    <h3>Gutter Size</h3>
-    <p>$gutter: 16px !default;</p>
-    <h3>Columns</h3>
-    <p>$grid-columns: 12 !default;</p>
-    <h3>Block Grid Columns</h3>
-    <p>$block-grid-columns: 3 !default;</p>
-    <h3>Container Width</h3>
-    <p>$container-width: 90% !default;</p>
-</section>
+    <div class="autogrid">
+      <div class="col">
+        <h3>Gutter Size</h3>
+        <p>$gutter: 16px !default;</p>
+      </div>
+      <div class="col">
+        <h3>Columns</h3>
+        <p>$grid-columns: 12 !default;</p>
+      </div>
+      <div class="col">
+        <h3>Block Grid Columns</h3>
+        <p>$block-grid-columns: 3 !default;</p>
+      </div>
+      <div class="col">
+        <h3>Container Width</h3>
+        <p>$container-width: 90% !default;</p>
+      </div>
+  </section>
 
-
-<section id="mixins">
+  <section id="mixins">
     <h2>Mixins <a class="top-link" href="#top">&#8679;</a></h2>
     <hr>
-    <h3>@mixin gridFrame</h3>
-    <p>Main Container. 100% height (100vh)</p>
 
-    <h3>@mixin gridBlock</h3>
-    <p>Roughly equivalent to a row. Evenly spaced</p>
+    <div class="autogrid">
+      <div class="col">
+        <h3>@mixin gridFrame</h3>
+          <p>Main Container. 100% height (100vh)</p>
+        <h3>@mixin gridBlock</h3>
+          <p>Roughly equivalent to a row. Evenly spaced</p>
+        <h3>@mixin container</h3>
+          <p>Horizontally centered container, constrains to width</p>
+      </div>
+      <div class="col">
+          <h3>@mixin autoGridGutters</h3>
+            <p>Auto Grid (guttered):</p>
+          <h3>@mixin autoGridGutterless</h3>
+            <p>Auto Grid Gutterless</p>
+          <h3>@mixin gridNumbered</h3>
+            <p>Numbered Grid</p>
+      </div>
+      <div class="col">
+          <h3>@mixin numberedColumn($columnWidth)</h3>
+            <p>Numbered Columns</p>
+          <h3>@mixin inertiaScroll</h3>
+            <p>Inertia scrolling for mobile browsers</p>
+          <h3>@mixin generateBlockGridGutters($blockGridValue)</h3>
+            <p>Mixin for block grids with gutters</p>
+          <h3>@mixin generateBlockGridGutterless($blockGridValue)</h3>
+            <p>Mixin for block grids without gutters:</p>
+      </div>
+    </div>
 
+  </section>
 
-    <h3>@mixin container</h3>
-    <p>Horizontally centered container, constrains to width</p>
-
-
-    <h3>@mixin autoGridGutters</h3>
-    <p>Auto Grid (guttered):</p>
-
-
-    <h3>@mixin autoGridGutterless</h3>
-    <p>Auto Grid Gutterless</p>
-
-
-    <h3>@mixin gridNumbered</h3>
-    <p>Numbered Grid</p>
-
-
-
-    <h3>@mixin numberedColumn($columnWidth)</h3>
-    <p>Numbered Columns</p>
-
-
-    <h3>@mixin inertiaScroll</h3>
-    <p>Inertia scrolling for mobile browsers</p>
-
-
-
-    <h3>@mixin generateBlockGridGutters($blockGridValue)</h3>
-    <p>Mixin for block grids with gutters</p>
-
-
-    <h3>@mixin generateBlockGridGutterless($blockGridValue)</h3>
-    <p>Mixin for block grids without gutters:</p>
-</section>
-
-
-<section id="helpers">
+  <section id="helpers">
     <h2>Helper Classes <a class="top-link" href="#top">&#8679;</a></h2>
     <hr>
 
-    <h4>Grid Specific:</h4>
+    <div class="autogrid">
+      <div class="col">
+        <h4>Grid Specific:</h4>
+        <h3>@mixin gridCentered {}</h3>
+          <p>justify-content: center;</p>
+        <h3>@mixin gridRight {}</h3>
+          <p>justify-content: flex-end;</p>
+        <h3>@mixin gridTop {}</h3>
+          <p>align-items: flex-start;</p>
+        <h3>@mixin gridMiddle {}</h3>
+          <p>align-items: center;</p>
+        <h3>@mixin gridBottom {}</h3>
+          <p>align-items: flex-end;</p>
+        <h3>@mixin gridReverse {}</h3>
+          <p>flex-direction: row-reverse;</p>
+        <h3>@mixin gridColumn {}</h3>
+          <p>flex-direction: column;</p>
+        <h3>@mixin gridColumnReverse {}</h3>
+          <p>flex-direction: column-reverse;</p>
+        <h3>@mixin gridSpaceBetween {}</h3>
+          <p>justify-content: space-between;</p>
+        <h3>@mixin gridSpaceAround {}</h3>
+          <p>justify-content: space-around;</p>
+        <h3>@mixin gridEqualHeight {}</h3>
+          <p>display: flex;</p>
+        <h3>@mixin gridNobottomPadding {}</h3>
+          <p>padding-bottom: 0;</p>
+      </div>
 
-    <h3>@mixin gridCentered {}</h3>
-    <p>justify-content: center;</p>
-
-    <h3>@mixin gridRight {}</h3>
-    <p>justify-content: flex-end;</p>
-
-    <h3>@mixin gridTop {}</h3>
-    <p>align-items: flex-start;</p>
-
-    <h3>@mixin gridMiddle {}</h3>
-    <p>align-items: center;</p>
-
-    <h3>@mixin gridBottom {}</h3>
-    <p>align-items: flex-end;</p>
-
-    <h3>@mixin gridReverse {}</h3>
-    <p>flex-direction: row-reverse;</p>
-
-    <h3>@mixin gridColumn {}</h3>
-    <p>flex-direction: column;</p>
-
-    <h3>@mixin gridColumnReverse {}</h3>
-    <p>flex-direction: column-reverse;</p>
-
-    <h3>@mixin gridSpaceBetween {}</h3>
-    <p>justify-content: space-between;</p>
-
-    <h3>@mixin gridSpaceAround {}</h3>
-    <p>justify-content: space-around;</p>
-
-    <h3>@mixin gridEqualHeight {}</h3>
-    <p>display: flex;</p>
-
-    <h3>@mixin gridNobottomPadding {}</h3>
-    <p>padding-bottom: 0;</p>
-
-
-    <h4>Column Specific:</h4>
-    <h3>@mixin columnTop</h3>
-    <p>align-self: flex-start;</p>
-
-    <h3>@mixin columnMiddle</h3>
-    <p>align-self: center;</p>
-
-    <h3>@mixin columnBottom</h3>
-    <p>align-self: flex-end;</p>
-
-    <h3>@mixin columnFirst</h3>
-    <p>order: -1;</p>
-
-    <h3>@mixin columnLast</h3>
-    <p>order: 1;</p>
-
-</section>
+      <div class="col">
+        <h4>Column Specific:</h4>
+        <h3>@mixin columnTop</h3>
+          <p>align-self: flex-start;</p>
+        <h3>@mixin columnMiddle</h3>
+          <p>align-self: center;</p>
+        <h3>@mixin columnBottom</h3>
+          <p>align-self: flex-end;</p>
+        <h3>@mixin columnFirst</h3>
+          <p>order: -1;</p>
+        <h3>@mixin columnLast</h3>
+          <p>order: 1;</p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
