@@ -1,0 +1,169 @@
+/* Doc Styles */
+
+
+
+// Basics:
+@import "../scss/normalize";
+
+// Import Grid Components:
+@import "../scss/grid-vars";
+@import "../scss/mediaqueries";
+@import "../scss/grid";
+@import "../scss/block-grid";
+@import "../scss/grid-helpers";
+@import "../scss/generators";
+
+// Generate Output:
+// Output helper classes
+@include outputPrototypingHelperClasses;
+
+// ------------------------------------------------------------
+// APP.HTML STYLES
+
+// Main Container
+.grid-frame {
+    @include gridFrame;
+}
+
+.topbar,
+footer {
+    padding: 20px;
+}
+
+.topbar {
+    border-bottom: 1px solid lightgray;}
+
+footer {
+    border-top: 1px solid lightgray;
+}
+
+// Row Equivalent
+.grid-block {
+    @include gridBlock;
+}
+
+aside {
+    width: 200px;
+    overflow-y: auto;
+    flex: 0 0 250px;
+
+    border-right: 1px solid lightgray;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        border-bottom: 1px solid lightgray;
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 20px 0 20px 10px;
+
+            &:hover { background: lightgray;}
+        }
+
+    }
+}
+
+main {
+    // background: lightyellow;
+    flex: 1;
+    overflow-y: auto;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+// ------------------------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.container {
+    @include container;
+}
+
+.three {
+    @include mq(small) { @include numberedColumn(12); }
+    @include mq(medium) { @include numberedColumn(3); }
+}
+
+.six {
+    @include mq(small) { @include numberedColumn(12); }
+    @include mq(medium) { @include numberedColumn(6); }
+}
+
+.nine {
+    @include mq(small) { @include numberedColumn(12); }
+    @include mq(medium) { @include numberedColumn(9); }
+}
+
+
+
+.bg4 {
+    @include mq(small) { @include generateBlockGridGutters(2); }
+    @include mq(medium) { @include generateBlockGridGutters(4); }
+    .box {background: gold;}
+}
+
+.bg3-gutterless {
+    @include mq(small) { @include generateBlockGridGutterless(2); }
+    @include mq(medium) { @include generateBlockGridGutterless(3); }
+    .box {background: red;}
+}
+
+.autogrid {
+    @include autoGridGutters;
+}
+.autogrid-gutterless {
+    @include autoGridGutterless;
+}
+
+.grid-numbered {
+    @include gridNumbered;
+}
+
+
+
+.box {
+    background: #97cd76;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+
+
+
+
+
+header {}
+
+section {
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.top-link {
+    float: right;
+}
