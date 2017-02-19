@@ -3,12 +3,18 @@
 
 // Import Grid Components:
 @import "grid-vars";
-@import "mediaqueries";
 @import "grid";
 @import "block-grid";
 @import "grid-helpers";
-@import "generators";
+
 
 // Generate Output:
+
 // Output helper classes
 @include outputPrototypingHelperClasses;
+
+// Output grid classes
+@include outputPrototypingGridClasses;
+
+// Output block grid classes
+@include outputPrototypingBlockGridClasses;

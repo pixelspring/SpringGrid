@@ -3,6 +3,10 @@
 /* Document
    ========================================================================== */
 
+* {
+    box-sizing: border-box;
+}
+
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
@@ -231,6 +235,8 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 /**

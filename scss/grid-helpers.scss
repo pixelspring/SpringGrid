@@ -8,9 +8,9 @@
 // ----------------------------------------------
 
 // Horizontal Alignment:
-.grid--gutterless {
+@mixin gridGutterless {
     margin: 0;
-    > [class*="col"]{
+    &> [class*="col"]{
         padding: 0;
     }
 }
@@ -24,8 +24,6 @@
     align-self: flex-end;
     margin-left: auto;
 }
-
-
 
 // Vertical Alignment:
 @mixin gridTop {
@@ -45,10 +43,9 @@
     flex-direction: row-reverse;
 }
 
-@mixin gridColumn {}
-.grid--column {
+@mixin gridColumn {
     flex-direction: column;
-    > [class*="col-"] {
+    &> [class*="col-"] {
       flex-basis: auto;
     }
 }
@@ -69,16 +66,20 @@
 }
 
 // Equal heights columns
-@mixin gridEqualHeight {}
-.grid--equalHeight > [class*="col"]{
-    display: flex;
+@mixin gridEqualHeight {
+    &> [class*="col"]{
+        display: flex;
+    }
 }
 
+
 // Removes the padding-bottom
-@mixin gridNobottomPadding {}
-.grid--noBottom > [class*="col"]{
-    padding-bottom: 0;
+@mixin gridNobottomPadding {
+    &> [class*="col"]{
+        padding-bottom: 0;
+    }
 }
+
 
 
 
@@ -109,6 +110,15 @@
 // GENERATE CLASSES FOR FAST PROTOTYPING
 // ----------------------------------------------
 @mixin outputPrototypingHelperClasses {
+    
+    .grid--gutterless { @include gridGutterless; }
+
+    .grid--column { @include gridColumn; }
+
+    .grid--equalHeight { @include gridEqualHeight; }
+
+    .grid--noBottomPadding { @include gridNobottomPadding; } 
+
     // Grid Alignment
     .grid--centered { @include gridCentered; }
     .grid--right {  @include gridRight; }
@@ -125,8 +135,6 @@
     // Spacing
     .grid--spaceBetween { @include gridSpaceBetween; }
     .grid--spaceAround { @include gridSpaceAround; }
-
-
 
     // Column Specific
     .column--top { @include columnTop; }

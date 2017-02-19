@@ -3,14 +3,20 @@
 
 // Import Grid Components:
 @import "../scss/grid-vars";
-@import "../scss/mediaqueries";
 @import "../scss/grid";
 @import "../scss/block-grid";
 @import "../scss/grid-helpers";
-@import "../scss/generators";
 
-// Generate & Output helper classes
+// Generate Output:
+
+// Output helper classes
 @include outputPrototypingHelperClasses;
+
+// Output grid classes
+@include outputPrototypingGridClasses;
+
+// Output block grid classes
+@include outputPrototypingBlockGridClasses;
 
 // ------------------------------------------------------------
 // DOC & EXAMPLE STYLES

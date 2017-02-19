@@ -2,12 +2,8 @@
 ///  Generate Block Grid
 ///
 
-// @example
-/*
-.block-grid-three-columns-with-gutters {
-    @include generateBlockGridGutter(3);
-}
-*/
+@import "mediaqueries";
+
 
 // Mixin for block grids with gutters:
 @mixin generateBlockGridGutters($blockGridValue) {
@@ -34,6 +30,27 @@
     &>* {
         flex-basis: (100%/$blockGridValue);
         max-width: (100%/$blockGridValue);
+    }
+
+}
+
+// Output prototyping block grid classes:
+@mixin outputPrototypingBlockGridClasses {
+
+    // Guttered:
+    @for $i from 1 through $grid-columns {
+        .block-grid-#{$i} {
+            @include mq(small) { @include generateBlockGridGutters(2); }
+            @include mq(medium) { @include generateBlockGridGutters($i); }
+        }
+    }
+
+    // Gutterless:
+    @for $i from 1 through $grid-columns {
+        .block-grid-#{$i}-gutterless {
+            @include mq(small) { @include generateBlockGridGutterless(2); }
+            @include mq(medium) { @include generateBlockGridGutterless($i); }
+        }
     }
 
 }

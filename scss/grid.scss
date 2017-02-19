@@ -2,6 +2,9 @@
 /// Grid.scss
 ///
 
+@import "mediaqueries";
+
+
 // Main wrapper for whole page:
 @mixin gridFrame {
     height: 100vh;
@@ -77,10 +80,8 @@
 
 // Numbered Columns
 @mixin numberedColumn($columnWidth) {
-
-    flex-basis: $grid-columns;
+    flex-basis: $columnWidth / $grid-columns * 100%;
     width: $columnWidth / $grid-columns * 100%;
-
 }
 
 
@@ -88,4 +89,27 @@
 @mixin inertiaScroll {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+
+
+
+
+// Generate Prototyping Grid Classes:
+@mixin outputPrototypingGridClasses {
+
+    .grid-frame { @include gridFrame; }
+    .grid-block { @include gridBlock; }
+    .container { @include container; }
+    .autogrid { @include autoGridGutters; }
+    .autogrid-gutterless { @include autoGridGutterless; }
+    .grid-numbered { @include gridNumbered; }
+
+    @for $i from 1 through $grid-columns {
+        .col-#{$i} {
+            @include mq(small) { @include numberedColumn(12); }
+            @include mq(medium) { @include numberedColumn($i); }
+        }
+    }
+
 }
