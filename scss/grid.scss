@@ -4,6 +4,10 @@
 
 @import "mediaqueries";
 
+* {
+    box-sizing: border-box;
+}
+
 
 // Main wrapper for whole page:
 @mixin gridFrame {
