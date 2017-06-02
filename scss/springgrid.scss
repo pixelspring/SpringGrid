@@ -480,6 +480,14 @@
 
 
 
+
+
+
+
+
+
+
+
 ///
 ///  Grid Helpers
 ///
@@ -584,4 +592,42 @@
 }
 @mixin columnLast {
       order: 1;
+}
+
+// ----------------------------------------------
+// GENERATE CLASSES FOR FAST PROTOTYPING
+// ----------------------------------------------
+@mixin outputPrototypingHelperClasses {
+    
+    .grid--gutterless { @include gridGutterless; }
+
+    .grid--column { @include gridColumn; }
+
+    .grid--equalHeight { @include gridEqualHeight; }
+
+    .grid--noBottomPadding { @include gridNobottomPadding; } 
+
+    // Grid Alignment
+    .grid--centered { @include gridCentered; }
+    .grid--right {  @include gridRight; }
+
+    // Vertical Alignment
+    .grid--top { @include gridTop; }
+    .grid--middle { @include gridMiddle; }
+    .grid--bottom {  @include gridBottom; }
+
+    // Ordering
+    .grid--reverse { @include gridReverse; }
+    .grid--column-reverse { @include gridColumnReverse; }
+
+    // Spacing
+    .grid--spaceBetween { @include gridSpaceBetween; }
+    .grid--spaceAround { @include gridSpaceAround; }
+
+    // Column Specific
+    .column--top { @include columnTop; }
+    .column--middle { @include columnMiddle; }
+    .column--bottom{ @include columnBottom; }
+    .column--first { @include columnFirst; }
+    .column--last { @include columnLast; }
 }
