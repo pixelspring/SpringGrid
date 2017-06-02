@@ -5,6 +5,7 @@
 @import "mediaqueries";
 
 // Container:
+// ------------------------------------
 .container {
   position: relative;
   margin: 0 auto;
@@ -35,10 +36,8 @@
 }
 
 
-
-
-
 // Columns:
+// ------------------------------------
 .column {
   display: block;
   flex-basis: 0;
