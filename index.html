@@ -17,6 +17,10 @@
       color: white;
     }
 
+    .boxalt {
+      background: dodgerblue;
+    }
+
     img {
       border-style: none;
       max-width: 100%;
@@ -39,8 +43,8 @@
 
 <body class="container">
 
-<img src="./assets/springgridlogo.svg">
-<h2>Grid Demo Test</h2>
+<img class="sglogo" src="./assets/springgridlogo.svg">
+<h2>Grid Test</h2>
 
 <h3>Auto Columns</h3>
 <div class="columns">
@@ -63,10 +67,10 @@
     </p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
 </div>
 
@@ -77,16 +81,16 @@
     </p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
 </div>
 
 <div class="columns">
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
   <div class="column is-half">
     <p class="box">
@@ -94,7 +98,7 @@
     </p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
 </div>
 
@@ -105,10 +109,10 @@
     </p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
 </div>
 
@@ -119,7 +123,7 @@
     </p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
 </div>
 
@@ -171,9 +175,9 @@
 <h3>Gapless</h3>
 <div class="columns is-gapless">
   <div class="column"><p class="box">First column</p></div>
-  <div class="column"><p class="box">Second column</p></div>
+  <div class="column"><p class="box boxalt">Second column</p></div>
   <div class="column"><p class="box">Third column</p></div>
-  <div class="column"><p class="box">Fourth column</p></div>
+  <div class="column"><p class="box boxalt">Fourth column</p></div>
 </div>
 
 <h3>Narrow</h3>
@@ -228,81 +232,9 @@
     <p class="box"><code>is-one-quarter</code></p>
   </div>
   <div class="column">
-    <p class="box">Auto</p>
+    <p class="box boxalt">Auto</p>
   </div>
 </div>
 
-<!--
-<h3>Alignment</h3>
-<div class="grid-numbered">
-  <div class="col-3"><div class="box"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p></div></div>
-  <div class="col-3 column--top"><div class="box">Top <br><code>column--top</code></div></div>
-  <div class="col-3 column--middle"><div class="box">Middle <br><code>column--middle</code></div></div>
-  <div class="col-3 column--bottom"><div class="box">Bottom <br><code>column--bottom</code></div></div>
-</div>
-
-<h3>Centered <code>(grid--centered)</code></h3>
-<div class="grid-numbered grid--centered">
-  <div class="col-3"><div class="box">1</div></div>
-  <div class="col-3"><div class="box">2</div></div>
-  <div class="col-3"><div class="box">3</div></div>
-</div>
-
-<h3>Right <code>(grid--right)</code></h3>
-<div class="grid-numbered grid--right">
-  <div class="col-3"><div class="box">1</div></div>
-  <div class="col-3"><div class="box">2</div></div>
-  <div class="col-3"><div class="box">3</div></div>
-</div>
-
-<h3>Space Between <code>(grid--spaceBetween)</code></h3>
-<div class="grid-numbered grid--spaceBetween">
-  <div class="col-3"><div class="box">1</div></div>
-  <div class="col-3"><div class="box">2</div></div>
-  <div class="col-3"><div class="box">3</div></div>
-</div>
-
-<h3>Space Around <code>(grid--spaceAround)</code></h3>
-<div class="grid-numbered grid--spaceAround">
-  <div class="col-3"><div class="box">1</div></div>
-  <div class="col-3"><div class="box">2</div></div>
-  <div class="col-3"><div class="box">3</div></div>
-</div>
-
-<h3>Reversed *</h3>
-<div class="grid-numbered grid--reverse">
-  <div class="col-3 "><div class="box">1</div></div>
-  <div class="col-3 "><div class="box">2</div></div>
-  <div class="col-3 "><div class="box">3</div></div>
-  <div class="col-3 "><div class="box">4</div></div>
-</div>
-
-<h3>Block Grid (Gutters)</h3>
-<div class="block-grid-4">
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-  <div class="grid-item"><div class="box">.block-grid-4 .grid-item</div></div>
-</div>
-
-<h3>Block Grid (Gutterless)</h3>
-<div class="block-grid-3-gutterless">
-  <div class="grid-item"><img src="http://placehold.it/600x200/eeeeee/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/cccccc/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/eeeeee/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/cccccc/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/eeeeee/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/cccccc/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/eeeeee/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/cccccc/666666"></div>
-  <div class="grid-item"><img src="http://placehold.it/600x200/eeeeee/666666"></div>
-</div>
--->
 </body>
 </html>
