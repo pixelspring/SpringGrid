@@ -2,6 +2,7 @@
 *.codekit3
 node_modules/
 .sass-cache/
+build/
 
 *.DS_Store
 .AppleDouble
