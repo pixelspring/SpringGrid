@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpringGrid | Flexbox Grid System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .box {
+      background: #97cd76;
+      padding: 10px;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .boxalt {
+      background: dodgerblue;
+    }
+
+    img {
+      border-style: none;
+      max-width: 100%;
+      vertical-align: top;
+    }
+
+    h2 {
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 4px;
+      margin-bottom: 60px;
+    }
+    
+    h3 {
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 4px;
+    }
+  </style>
+</head>
+
+
+<body class="container">
+
+<img class="sglogo" src="./assets/springgridlogo.svg">
+<h2>Grid Test</h2>
+
+<h3>Auto Columns</h3>
+<div class="columns">
+  <div class="column"><p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+  <div class="column"><p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+  <div class="column"><p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+</div>
+
+
+<h3>Vertical Centering</h3>
+<div class="columns is-centered">
+  <div class="column is-half is-centered"><p class="box">column is-half is-centered</p></div>
+</div>
+
+<h3>Named Columns</h3>
+<div class="columns">
+  <div class="column is-three-quarters">
+    <p class="box">
+      <code class="html">is-three-quarters</code>
+    </p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-two-thirds">
+    <p class="box">
+      <code class="html">is-two-thirds</code>
+    </p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+  <div class="column is-half">
+    <p class="box">
+      <code class="html">is-half</code>
+    </p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-one-third">
+    <p class="box">
+      <code class="html">is-one-third</code>
+    </p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-one-quarter">
+    <p class="box">
+      <code class="html">is-one-quarter</code>
+    </p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+</div>
+
+
+<h3>Numbered Columns</h3>
+<div class="columns">
+  <div class="column is-one-quarter"><p class="box">.column .is-3</p></div>
+  <div class="column is-half"><p class="box">.column .is-6</p></div>
+  <div class="column is-one-quarter"><p class="box">.column .is-3</p></div>
+</div>
+
+<div class="columns">
+  <div class="column is-2"><div class="box">.is-2</div></div>
+  <div class="column is-3"><div class="box">.is-3</div></div>
+  <div class="column is-6"><div class="box">.is-6</div></div>
+  <div class="column is-1"><div class="box">.is-1</div></div>
+</div>
+
+
+<h3>Nested Grid</h3>
+<div class="columns">
+
+  <div class="column">
+    <div class="box">First column
+      <div class="columns is-mobile">
+        <div class="column">
+          First nested column
+        </div>
+        <div class="column">
+          Second nested column
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="box boxalt">Second column
+      <div class="columns is-mobile">
+        <div class="column is-half">
+          50%
+        </div>
+        <div class="column">
+          Auto
+        </div>
+        <div class="column">
+          Auto
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Gapless</h3>
+<div class="columns is-gapless">
+  <div class="column"><p class="box">First column</p></div>
+  <div class="column"><p class="box boxalt">Second column</p></div>
+  <div class="column"><p class="box">Third column</p></div>
+  <div class="column"><p class="box boxalt">Fourth column</p></div>
+</div>
+
+<h3>Narrow</h3>
+<div class="columns">
+  <div class="column is-narrow">
+    <div class="box" style="width: 100px;">
+      <p class="title is-5">Narrow column</p>
+      <p class="subtitle">This column is only 100px wide.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="box">
+      <p class="title is-5">Flexible column</p>
+      <p class="subtitle">This column will take up the remaining space available.</p>
+    </div>
+  </div>
+</div>
+
+<h3>Offset Columns</h3>
+<div class="columns is-mobile">
+  <div class="column is-half is-offset-one-quarter"><p class="box">column is-half is-offset-one-quarter</p></div>
+</div>
+
+<div class="columns is-mobile">
+  <div class="column is-4 is-offset-8"><p class="box">column is-4 is-offset-8</p></div>
+</div>
+
+<h3>Multiline</h3>
+<div class="columns is-multiline is-mobile">
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column is-half">
+    <p class="box"><code>is-half</code></p>
+  </div>
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column is-one-quarter">
+    <p class="box"><code>is-one-quarter</code></p>
+  </div>
+  <div class="column">
+    <p class="box boxalt">Auto</p>
+  </div>
+</div>
+
+</body>
+</html>
