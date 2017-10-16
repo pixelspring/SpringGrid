@@ -744,3 +744,15 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
+
+.valign-top {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.valign-middle {
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.valign-bottom {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }

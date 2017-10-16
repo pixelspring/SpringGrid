@@ -1,0 +1,18 @@
+///
+///  Grid Helpers
+///
+
+
+// ----------------------------------------------
+// COLUMN SPECIFIC
+// ----------------------------------------------
+
+.valign-top {
+    align-self: flex-start;
+}
+.valign-middle {
+    align-self: center;
+}
+.valign-bottom {
+    align-self: flex-end;
+}
