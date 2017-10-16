@@ -2,10 +2,10 @@
 /// Grid.scss
 ///
 
+// Variables:
+$column-gap: 0.75rem;
+
 @import "mediaqueries";
 @import "container";
 @import "columns";
 @import "springgrid-helpers";
-
-// Variables:
-$column-gap: 0.75rem !default;
